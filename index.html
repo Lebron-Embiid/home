@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div class="content" id="content">
+		<div class="nav">
+			<img src="logo.jpg" class="logo">
+			<ul id="nav">
+				<li class="active"><a href="#">新品</a></li>
+				<li><a href="#">极客</a></li>
+			</ul>
+		</div>
+		<section class="box">
+			<div class="left">
+				<img src="left1.jpg" id="left1">
+				<p>三星S5570/I559图赏</p>
+			</div>
+			<div class="right" id="slide">
+				<div class="pos" id="pos">
+					<ul class="img">
+						<li>
+							<img src="right1.jpg">
+							<span>宾得推RS1500超级英雄限量版</span>
+							<p>日本宾得公司的相机产品一向都是因多种配色而...</p>
+						</li>
+						<li>
+							<img src="right2.jpg">
+							<span>宾得推RS1500超级英雄限量版</span>
+							<p>日本宾得公司的相机产品一向都是因多种配色而...</p>
+						</li>
+						<li>
+							<img src="right3.jpg">
+							<span>宾得推RS1500超级英雄限量版</span>
+							<p>日本宾得公司的相机产品一向都是因多种配色而...</p>
+						</li>
+					</ul>
+					<ul class="img hide">
+						<li>
+							<img src="right3.jpg">
+							<span>超迷你Micro SD读卡器相机</span>
+							<p>Micro SD读卡器可以造得很小，数码相机同样可...</p>
+						</li>
+						<li>
+							<img src="right6.jpg">
+							<span>超迷你Micro SD读卡器相机</span>
+							<p>Micro SD读卡器可以造得很小，数码相机同样可...</p>
+						</li>
+						<li>
+							<img src="right7.jpg">
+							<span>超迷你Micro SD读卡器相机</span>
+							<p>Micro SD读卡器可以造得很小，数码相机同样可...</p>
+						</li>
+					</ul>
+					<ul class="img hide">
+						<li>
+							<img src="right2.jpg">
+							<span>宾得推RS1500超级英雄限量版</span>
+							<p>日本宾得公司的相机产品一向都是因多种配色而...</p>
+						</li>
+						<li>
+							<img src="right3.jpg">
+							<span>宾得推RS1500超级英雄限量版</span>
+							<p>日本宾得公司的相机产品一向都是因多种配色而...</p>
+						</li>
+						<li>
+							<img src="right6.jpg">
+							<span>宾得推RS1500超级英雄限量版</span>
+							<p>日本宾得公司的相机产品一向都是因多种配色而...</p>
+						</li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<div class="page" id="page">
+					<span class="prev" id="prev"></span>
+					<a class="active"></a>
+					<a></a>
+					<a></a>
+					<span class="next" id="next"></span>
+				</div>
+			</div>
+		</section>
+		<section class="box hide">
+			<div class="left">
+				<img src="left2.jpg" id="left2">
+				<p>小鸟学飞</p>
+			</div>
+			<div class="right" id="second">
+				<ul class="img">
+					<li>
+						<img src="right4.jpg">
+						<span>LBS预设提醒服务应用Neer</span>
+						<p>今天介绍的Neer就是一个可以在某地预先设置一......</p>
+					</li>
+					<li>
+						<img src="right5.jpg">
+						<span>LBS预设提醒服务应用Neer</span>
+						<p>今天介绍的Neer就是一个可以在某地预先设置一...</p>
+					</li>
+					<li>
+						<img src="right4.jpg">
+						<span>LBS预设提醒服务应用Neer</span>
+						<p>今天介绍的Neer就是一个可以在某地预先设置一...</p>
+					</li>
+				</ul>
+				<div class="clear"></div>
+				<div class="page">
+					<span class="prev"></span>
+					<a class="active"></a>
+					<span class="next"></span>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+<script type="text/javascript">
+	function getId(id){
+		return document.getElementById(id);
+	}
+	function over(){
+			left1.src = this.src;
+			left1.style.width = "177px";
+			left1.style.height = "147px";
+		}
+	function out(){
+		left1.src = "left1.jpg";
+	}
+	function over1(){
+			left2.src = this.src;
+			left2.style.width = "177px";
+			left2.style.height = "147px";
+		}
+	function out1(){
+		left2.src = "left2.jpg";
+	}
+
+	window.onload = function(){
+		// 选项卡
+		var Cont = getId("content");
+		var Ul = Cont.getElementsByTagName("ul")[0];
+		var Li = Ul.getElementsByTagName("li");
+		var Div = Cont.getElementsByTagName("section");
+		
+		for(var i=0;i<Li.length;i++){
+			Li[i].index = i;
+			Li[i].onmouseover = function(){
+				for(var j=0;j<Li.length;j++){
+					Li[j].className = "";
+					Div[j].className = "hide";
+				}
+				this.className = "active";
+				Div[this.index].className = "box";
+			}
+		}
+
+		// 轮播
+		var oSlide = getId("slide");
+		var oUl = oSlide.getElementsByTagName("ul");
+		var oUl1 = oSlide.getElementsByTagName("ul")[0];
+		var oUl2 = oSlide.getElementsByTagName("ul")[1];
+		var oUl3 = oSlide.getElementsByTagName("ul")[2];
+
+		var oImg1 = oUl1.getElementsByTagName("img");
+		var oImg2 = oUl2.getElementsByTagName("img");
+		var oImg3 = oUl3.getElementsByTagName("img");
+
+		var second = getId("second");
+		var sUl = second.getElementsByTagName("ul")[0];
+		var sImg = sUl.getElementsByTagName("img");
+
+		var left1 = getId("left1");
+		var left2 = getId("left2");
+		var oPage = getId("page");
+		var oA = oPage.getElementsByTagName("a");
+		for(var m=0;m<oA.length;m++){
+			oA[m].index = m;
+			oA[m].onmouseover = function(){
+				for(var n=0;n<oA.length;n++){
+					oA[n].className = "";
+					oUl[n].className = "hide";
+				}
+				this.className = "active";
+				oUl[this.index].className = "img";
+			}
+		}
+		for(var x=0;x<oImg1.length;x++){
+			oImg1[x].index = x;
+			oImg1[x].onmouseover = over;
+			oImg1[x].onmouseout = out;
+			oImg2[x].onmouseover = over;
+			oImg2[x].onmouseout = out;
+			oImg3[x].onmouseover = over;
+			oImg3[x].onmouseout = out;
+		}
+		
+		for(var y=0;y<sImg.length;y++){
+			sImg[y].index = y;
+			sImg[y].onmouseover = over1;
+			sImg[y].onmouseout = out1;
+		}
+	}
+
+
+		var oPrev = getId("prev");
+		var oNext = getId("next");
+		var oPos = getId("pos");
+</script>
+</html>

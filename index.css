@@ -1,0 +1,157 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.clear{
+	clear: both;
+}
+.show{
+	display: block;
+}
+.hide{
+	display: none;
+}
+.content{
+	width: 700px;
+	height: 260px;
+	margin: 100px auto;
+	border: 1px solid #B6E4F8;
+}
+.content .logo{
+	float: left;
+}
+.content .nav{
+	width: 100%;
+	height: 40px;
+}
+.content ul{
+	float: left;
+	list-style: none;
+}
+.content #nav li{
+	float: left;
+	width: 98px;
+	height: 40px;
+	border-right: 1px solid #B3E1F7;
+	line-height: 38px;
+	text-align: center;
+	background: #D6EFF7;
+}
+.content #nav li.active{
+	background:#fff url(down.jpg) 15px center no-repeat;
+	height: 40px;
+	border-bottom: 1px solid #fff;
+}
+.content #nav li.active a{
+	color:#118009;
+}
+.content #nav li a{
+	display: block;
+	width: 98px;
+	height: 40px;
+	text-decoration: none;
+	color:#086BA5;
+	font-size: 14px;
+	font-weight: bold;
+}
+.content .box{
+	width: 100%;
+	height: 218px;
+	border-top: 1px solid #73BDEF;
+}
+.content .box .left{
+	width: 190px;
+	height: 180px;
+	margin: 10px 15px;
+	float: left;
+}
+.content .box .left img{
+	border:6px solid #A5DEF7;
+	box-shadow: 0 10px 10px #C6DEEF;
+	cursor: pointer;
+}
+.content .box .left p{
+	text-align: center;
+	color:#5B5B5B;
+	font-size: 14px;
+	background: #D6EFF7;
+	height: 20px;
+}
+.content .box .right{
+	width: 480px;
+	height: 209px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	margin-top: 10px;
+}
+.content .box .right .pos{
+	width: 1440px;
+	position: absolute;
+}
+.content .box .right .img{
+	width: 480px;
+	height: 170px;
+	margin-bottom: 10px;
+	float: left;
+}
+.content .box .right .img li{
+	width: 160px;
+	height: 170px;
+	float: left;
+}
+.content .box .right .img li span{
+	color:#1313A4;
+	font-size: 11px;
+}
+.content .box .right .img li p{
+	width: 150px;
+	font-size: 12px;
+	color:#606060;
+	margin-top: 10px;
+}
+.content .box .right img{
+	padding: 2px;
+	border:1px solid #ccc;
+}
+.content .box .right img:hover{
+	border:1px solid #2B94DE;
+	cursor: pointer;
+}
+.page{
+	width: 120px;
+	height: 17px;
+	position: absolute;
+	left: 40%;
+	bottom: 10px;
+}
+.page .prev{
+	display: block;
+	width: 17px;
+	height: 17px;
+	background: url(prev.jpg);
+	float: left;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.page .next{
+	display: block;
+	width: 17px;
+	height: 17px;
+	background: url(next.jpg);
+	float: left;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.page a{
+	display: block;
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin: 3px;
+	background: url(yuan.jpg);
+}
+.page a.active,.page a:hover{
+	background: url(active.jpg);
+	cursor: pointer;
+}
